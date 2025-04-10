@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgrount">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="732dp"
+        android:layout_height="892dp"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.5"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/locationTextView"
+        map:srcCompat="@drawable/frame_image" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="620dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="35dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toBottomOf="@+id/map">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/placeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Location Name"
+            android:textColor="@color/buttons"
+            android:textSize="20sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/locationTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:shadowColor="#020202"
+        android:shadowDx="3"
+        android:shadowDy="3"
+        android:shadowRadius="3"
+        android:text="LOCATION"
+        android:textColor="@color/text"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.497"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="701dp"
+        android:layout_height="858dp"
+        map:layout_constraintBottom_toBottomOf="@+id/imageView"
+        map:layout_constraintEnd_toEndOf="@+id/imageView"
+        map:layout_constraintStart_toStartOf="@+id/imageView"
+        map:layout_constraintTop_toTopOf="@+id/imageView"
+        tools:context=".view.MapsActivity" />
+
+    <ImageButton
+        android:id="@+id/saveButton"
+        android:layout_width="104dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/backgrount"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintHorizontal_bias="0.5"
+        map:layout_constraintStart_toStartOf="parent"
+        map:srcCompat="@drawable/save_icon" />
+
+    <ImageButton
+        android:id="@+id/deleteButton"
+        android:layout_width="104dp"
+        android:layout_height="95dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="@color/backgrount"
+        android:visibility="gone"
+        map:layout_constraintBottom_toBottomOf="parent"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toStartOf="parent"
+        map:srcCompat="@drawable/delete_icon" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
