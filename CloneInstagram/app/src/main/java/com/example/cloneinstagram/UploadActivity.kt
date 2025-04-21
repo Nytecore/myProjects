@@ -54,8 +54,7 @@ class UploadActivity : AppCompatActivity() {
         auth = Firebase.auth
         firestore = Firebase.firestore
         storage = Firebase.storage
-
-
+        
 
         binding.imageView.setOnClickListener{
 

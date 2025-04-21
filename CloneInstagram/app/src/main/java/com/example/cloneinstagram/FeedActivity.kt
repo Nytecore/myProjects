@@ -4,18 +4,24 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.cloneinstagram.databinding.ActivityFeedBinding
+import com.example.cloneinstagram.model.Post
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
 class FeedActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityFeedBinding
-    private lateinit var auth: FirebaseAuth
+    private lateinit var binding : ActivityFeedBinding
+    private lateinit var auth : FirebaseAuth
+    private lateinit var db : FirebaseFirestore
+    private lateinit var postArrayList : ArrayList<Post>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,9 +34,55 @@ class FeedActivity : AppCompatActivity() {
             insets
         }
 
-        auth = Firebase.auth
+            // Set toolbar action bar
         setSupportActionBar(binding.toolbar)
 
+            // Initialize authentication
+        auth = Firebase.auth
+
+            // Initialize firestore database
+        db = Firebase.firestore
+
+            // Initialize postArrayList for fields
+        postArrayList = ArrayList<Post>()
+
+
+        getData()
+
+
+
+    }
+
+        //get data from database
+    private fun getData() {
+            //create method for get data
+        db.collection("Posts").addSnapshotListener { value, error ->
+                //error nullable control
+            if (error != null) {
+                Toast.makeText(this@FeedActivity , error.localizedMessage , Toast.LENGTH_LONG).show()
+            } else {
+                    //value nullable control
+                if (value != null) {
+                        //value is not empty control
+                    if (!value.isEmpty) {
+                        val documents = value.documents
+                            //get document from documents here
+                        for (document in documents) {
+                            //get datas here with reference from firestore and use casting
+                            val comment = document.get("comment") as String
+                            val userEmail = document.get("userEmail") as String
+                            val downloadUrl = document.get("downloadUrl") as String
+
+
+                                //create "post" class for get all fields in ArrayList
+                            val post = Post(userEmail , comment, downloadUrl)
+                            postArrayList.add(post)
+
+                        }
+                    }
+                }
+            }
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
