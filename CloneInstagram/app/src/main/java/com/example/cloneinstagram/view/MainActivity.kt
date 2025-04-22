@@ -1,4 +1,4 @@
-package com.example.cloneinstagram
+package com.example.cloneinstagram.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.cloneinstagram.R
 import com.example.cloneinstagram.databinding.ActivityMainBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -32,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         val currentUser = auth.currentUser
 
         if (currentUser != null) {
-            val intent = Intent(this@MainActivity,FeedActivity::class.java)
+            val intent = Intent(this@MainActivity, FeedActivity::class.java)
             startActivity(intent)
             finish()
         }
@@ -46,7 +47,7 @@ class MainActivity : AppCompatActivity() {
 
                 auth.createUserWithEmailAndPassword(email , password).addOnSuccessListener {
                      //Success
-                    val intent = Intent(this@MainActivity,FeedActivity::class.java)
+                    val intent = Intent(this@MainActivity, FeedActivity::class.java)
                     startActivity(intent)
                     finish()
 
@@ -76,17 +77,15 @@ class MainActivity : AppCompatActivity() {
             if (email.isNotEmpty() && password.isNotEmpty()) {
 
                 auth.signInWithEmailAndPassword(email,password).addOnSuccessListener {
-                    val intent = Intent(this@MainActivity,FeedActivity::class.java)
+                    val intent = Intent(this@MainActivity, FeedActivity::class.java)
                     startActivity(intent)
                     finish()
 
                 }.addOnFailureListener {
                     Toast.makeText(this@MainActivity,it.localizedMessage,Toast.LENGTH_LONG).show()
-
                 }
 
             } else {
-
                 if (email.equals("")) {
                     Toast.makeText(this@MainActivity, "E-mail cannot be empty", Toast.LENGTH_LONG)
                         .show()
@@ -99,9 +98,6 @@ class MainActivity : AppCompatActivity() {
 
                 }
             }
-
-
         }
-
     }
 }

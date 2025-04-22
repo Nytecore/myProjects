@@ -1,4 +1,4 @@
-package com.example.cloneinstagram
+package com.example.cloneinstagram.view
 
 import android.content.Intent
 import android.os.Bundle
@@ -9,11 +9,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.cloneinstagram.R
+import com.example.cloneinstagram.adapter.FeedRecyclerAdapter
 import com.example.cloneinstagram.databinding.ActivityFeedBinding
 import com.example.cloneinstagram.model.Post
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
@@ -22,6 +26,8 @@ class FeedActivity : AppCompatActivity() {
     private lateinit var auth : FirebaseAuth
     private lateinit var db : FirebaseFirestore
     private lateinit var postArrayList : ArrayList<Post>
+    private lateinit var feedAdapter : FeedRecyclerAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -46,17 +52,18 @@ class FeedActivity : AppCompatActivity() {
             // Initialize postArrayList for fields
         postArrayList = ArrayList<Post>()
 
-
         getData()
 
-
+        binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        feedAdapter = FeedRecyclerAdapter(postArrayList)
+        binding.recyclerView.adapter = feedAdapter
 
     }
 
         //get data from database
     private fun getData() {
             //create method for get data
-        db.collection("Posts").addSnapshotListener { value, error ->
+        db.collection("Posts").orderBy("date" , Query.Direction.DESCENDING).addSnapshotListener { value, error ->
                 //error nullable control
             if (error != null) {
                 Toast.makeText(this@FeedActivity , error.localizedMessage , Toast.LENGTH_LONG).show()
@@ -67,18 +74,22 @@ class FeedActivity : AppCompatActivity() {
                     if (!value.isEmpty) {
                         val documents = value.documents
                             //get document from documents here
+
+                        postArrayList.clear()
+                            // Start arrray to clear
+
                         for (document in documents) {
                             //get datas here with reference from firestore and use casting
                             val comment = document.get("comment") as String
                             val userEmail = document.get("userEmail") as String
                             val downloadUrl = document.get("downloadUrl") as String
 
-
                                 //create "post" class for get all fields in ArrayList
                             val post = Post(userEmail , comment, downloadUrl)
                             postArrayList.add(post)
 
                         }
+                        feedAdapter.notifyDataSetChanged()
                     }
                 }
             }
@@ -87,13 +98,13 @@ class FeedActivity : AppCompatActivity() {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         val menuInflater = menuInflater
-        menuInflater.inflate(R.menu.insta_menu , menu)
+        menuInflater.inflate(R.menu.insta_menu, menu)
         return true
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         if (item.itemId == R.id.add_post) {
-            val intent = Intent(this@FeedActivity,UploadActivity::class.java)
+            val intent = Intent(this@FeedActivity, UploadActivity::class.java)
             startActivity(intent)
         } else if (item.itemId == R.id.signout) {
             auth.signOut()

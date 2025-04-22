@@ -3,10 +3,55 @@
   <component name="AndroidLayouts">
     <shared>
       <config>
+        <device id="_device_class_tablet" />
         <device id="_device_class_phone" />
       </config>
     </shared>
     <layouts>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-large/activity_feed.xml">
+        <config>
+          <state>portrait</state>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-large/activity_main.xml">
+        <config>
+          <state>portrait</state>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-large/activity_upload.xml">
+        <config>
+          <state>portrait</state>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-large/recycler_row.xml">
+        <config>
+          <state>portrait</state>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-xl/activity_main.xml">
+        <config>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-xl/activity_upload.xml">
+        <config>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-xxl/activity_main.xml">
+        <config>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout-xxl/activity_upload.xml">
+        <config>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/activity_feed.xml">
         <config>
           <theme>@style/Theme.CloneInstagram</theme>
@@ -22,6 +67,11 @@
           <theme>@style/Theme.CloneInstagram</theme>
         </config>
       </layout>
+      <layout url="file://$PROJECT_DIR$/app/src/main/res/layout/recycler_row.xml">
+        <config>
+          <theme>@style/Theme.CloneInstagram</theme>
+        </config>
+      </layout>
       <layout url="file://$PROJECT_DIR$/app/src/main/res/menu/insta_menu.xml">
         <config>
           <theme>@style/Theme.CloneInstagram</theme>
@@ -33,15 +83,37 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9665a06-d1e2-4e90-90b9-bd7e8231ce21" name="Changes" comment="create: create Firestore database, Firebase Authentication module and Firebase Storage modules and initialize them&#10;update: update codes and libs&#10;database: create database and datas and put into the Firestore database with hashMap (key-value)&#10;storage: create a storage and when users upload images, the images will upload in storage and get URL for firestore.">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/model/Post.kt" afterDir="false" />
+    <list default="true" id="a9665a06-d1e2-4e90-90b9-bd7e8231ce21" name="Changes" comment="update: update codes&#10;database: The process of importing the required fields into the Firestore database was completed.">
+      <change afterPath="$PROJECT_DIR$/app/src/google-services.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/adapter/FeedRecyclerAdapter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/recycler_background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_feed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/activity_upload.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-large/recycler_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-xl/activity_feed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-xl/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-xl/activity_upload.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-xl/recycler_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxl/activity_feed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxl/activity_main.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxl/activity_upload.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout-xxl/recycler_row.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/res/layout/recycler_row.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/checksums/checksums.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/FeedActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/FeedActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/UploadActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/UploadActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/FeedActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/view/FeedActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/MainActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/view/MainActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/UploadActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/view/UploadActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_feed.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_feed.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_upload.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_upload.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,6 +134,7 @@
       <list>
         <option value="valueResourceFile" />
         <option value="resourceFile" />
+        <option value="layoutResourceFile" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -105,16 +178,26 @@
     &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
     &quot;com.google.services.firebase.aqiPopupShown&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/bora/Desktop/GitHub/myProjects/CloneInstagram/app/src/main/res/layout-xxl&quot;
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout-xxl" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout-xl" />
+      <recent name="$PROJECT_DIR$/app/src/main/res/layout-large" />
+    </key>
     <key name="android.template.2093034862">
       <recent name="com.example.cloneinstagram" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/app/src/main/res/drawable" />
+      <recent name="$PROJECT_DIR$/app/src" />
       <recent name="$PROJECT_DIR$/app" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.example.cloneinstagram.view" />
     </key>
   </component>
   <component name="RunManager">
@@ -216,25 +299,45 @@
       <option name="project" value="LOCAL" />
       <updated>1745181744632</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update: update codes&#10;database: The process of importing the required fields into the Firestore database was completed.">
+      <option name="closed" value="true" />
+      <created>1745266052625</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1745266052626</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="create: create new login page&#10;update: update codes and libs" />
     <MESSAGE value="create: create Firestore database, Firebase Authentication module and Firebase Storage modules and initialize them&#10;update: update codes and libs&#10;database: create database and datas and put into the Firestore database with hashMap (key-value)&#10;storage: create a storage and when users upload images, the images will upload in storage and get URL for firestore." />
-    <option name="LAST_COMMIT_MESSAGE" value="create: create Firestore database, Firebase Authentication module and Firebase Storage modules and initialize them&#10;update: update codes and libs&#10;database: create database and datas and put into the Firestore database with hashMap (key-value)&#10;storage: create a storage and when users upload images, the images will upload in storage and get URL for firestore." />
+    <MESSAGE value="update: update codes&#10;database: The process of importing the required fields into the Firestore database was completed." />
+    <option name="LAST_COMMIT_MESSAGE" value="update: update codes&#10;database: The process of importing the required fields into the Firestore database was completed." />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">
       <map>
         <entry key="com.example.cloneinstagram">
           <value>
-            <CheckInfo lastCheckTimestamp="1745177002230" />
+            <CheckInfo lastCheckTimestamp="1745302683659" />
           </value>
         </entry>
         <entry key="com.example.cloneinstagram.test">
           <value>
-            <CheckInfo lastCheckTimestamp="1745177002230" />
+            <CheckInfo lastCheckTimestamp="1745302683659" />
           </value>
         </entry>
       </map>

@@ -1,4 +1,4 @@
-package com.example.cloneinstagram
+package com.example.cloneinstagram.view
 
 import android.Manifest
 import android.content.Intent
@@ -16,6 +16,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.cloneinstagram.R
 import com.example.cloneinstagram.databinding.ActivityUploadBinding
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.Timestamp
@@ -54,7 +55,6 @@ class UploadActivity : AppCompatActivity() {
         auth = Firebase.auth
         firestore = Firebase.firestore
         storage = Firebase.storage
-        
 
         binding.imageView.setOnClickListener{
 
@@ -135,11 +135,8 @@ class UploadActivity : AppCompatActivity() {
                                 }
                         }
 
-
-
-
                     }.addOnFailureListener {
-                        //
+                        //Chech debugging
                         println(it)
 
                     }

@@ -10,19 +10,18 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="337dp"
-        android:layout_height="332dp"
-        android:layout_marginTop="160dp"
+        android:layout_width="557dp"
+        android:layout_height="544dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/select_image" />
 
     <EditText
         android:id="@+id/commentText"
-        android:layout_width="302dp"
-        android:layout_height="56dp"
+        android:layout_width="458dp"
+        android:layout_height="70dp"
         android:layout_marginTop="24dp"
         android:backgroundTint="@color/white"
         android:drawableLeft="@drawable/comment_image"
@@ -32,6 +31,7 @@
         android:padding="8dp"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
+        android:textSize="28sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -39,12 +39,13 @@
 
     <Button
         android:id="@+id/uploadButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="167dp"
+        android:layout_height="66dp"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_button"
         android:text="SHARE"
         android:textColor="@color/white"
+        android:textSize="24sp"
         app:backgroundTint="@null"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
