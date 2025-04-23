@@ -101,6 +101,8 @@ class UploadActivity : AppCompatActivity() {
 
         binding.uploadButton.setOnClickListener {
 
+            binding.uploadButton.isEnabled = false
+
             //Universal Unique ID
             val uuid = UUID.randomUUID()
             val imageName = "$uuid.jpg"
@@ -146,6 +148,9 @@ class UploadActivity : AppCompatActivity() {
 
                 }
             }
+
+            Toast.makeText(this@UploadActivity , "The post shared succesfully!" , Toast.LENGTH_LONG).show()
+            binding.uploadButton.isEnabled = false
         }
     }
 
