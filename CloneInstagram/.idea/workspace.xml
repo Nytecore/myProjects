@@ -83,14 +83,15 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a9665a06-d1e2-4e90-90b9-bd7e8231ce21" name="Changes" comment="update: update codes&#10;recyclerview: create RecyclerView&#10;adapter: created Adapter for RecyclerView&#10;picasso: using Picasso library for image upload to database&#10;&#10;COMPLETE PROJECT">
+    <list default="true" id="a9665a06-d1e2-4e90-90b9-bd7e8231ce21" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/app/src/google-services.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.11.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/view/UploadActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/cloneinstagram/view/UploadActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/libs.versions.toml" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/libs.versions.toml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -292,7 +293,15 @@
       <option name="project" value="LOCAL" />
       <updated>1745337238738</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="update: some issued change and update codes, bug fix">
+      <option name="closed" value="true" />
+      <created>1745393318274</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1745393318274</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -311,7 +320,8 @@
     <MESSAGE value="create: create Firestore database, Firebase Authentication module and Firebase Storage modules and initialize them&#10;update: update codes and libs&#10;database: create database and datas and put into the Firestore database with hashMap (key-value)&#10;storage: create a storage and when users upload images, the images will upload in storage and get URL for firestore." />
     <MESSAGE value="update: update codes&#10;database: The process of importing the required fields into the Firestore database was completed." />
     <MESSAGE value="update: update codes&#10;recyclerview: create RecyclerView&#10;adapter: created Adapter for RecyclerView&#10;picasso: using Picasso library for image upload to database&#10;&#10;COMPLETE PROJECT" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: update codes&#10;recyclerview: create RecyclerView&#10;adapter: created Adapter for RecyclerView&#10;picasso: using Picasso library for image upload to database&#10;&#10;COMPLETE PROJECT" />
+    <MESSAGE value="update: some issued change and update codes, bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: some issued change and update codes, bug fix" />
   </component>
   <component name="play_dynamic_filters_status">
     <option name="appIdToCheckInfo">

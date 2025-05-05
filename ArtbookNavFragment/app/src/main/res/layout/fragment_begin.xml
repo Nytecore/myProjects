@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/art_background"
+    tools:context=".view.BeginFragment">
+
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="273dp"
+        android:layout_height="413dp"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="115dp"
+        android:layout_marginEnd="69dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/art_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="314dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="36dp"
+        android:text="WELCOME TO YOUR ARTBOOK"
+        android:textAlignment="center"
+        android:textColor="@color/custom_yellow"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toTopOf="@+id/beginButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/beginButton"
+        android:layout_width="121dp"
+        android:layout_height="63dp"
+        android:layout_marginBottom="105dp"
+        android:background="@drawable/custom_button"
+        android:text="BEGIN"
+        android:textColor="@color/custom_yellow"
+        android:textSize="24sp"
+        app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
