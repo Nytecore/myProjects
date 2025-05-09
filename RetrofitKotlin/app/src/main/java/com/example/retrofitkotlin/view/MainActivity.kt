@@ -101,4 +101,9 @@ class MainActivity : AppCompatActivity() {
             binding.recyclerView.layoutManager = LinearLayoutManager(this@MainActivity)
         }
     }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        compositeDisposable?.clear()
+    }
 }
